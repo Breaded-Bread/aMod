@@ -23,45 +23,44 @@ namespace aMod.Content
             ItemID.GoldBar, ItemID.PlatinumBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), GoldBarRecipeGroup);
         }
-		public override void AddRecipes() 
+	public override void AddRecipes() 
         {
-			var petPick = ModContent.GetInstance<Items.Tools.PetrifiedWoodPickaxe>();
-            var petAxe = ModContent.GetInstance<Items.Tools.PetrifiedWoodAxe>();
-            var petHammer = ModContent.GetInstance<Items.Tools.PetrifiedWoodHammer>();
-			// Start a new Recipe.
-			petPick.CreateRecipe()
-				// Adds a Mod Ingredient. Do not attempt ItemID.ExampleSword, it's not how it works.
-				.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
-				.AddIngredient(ItemID.GoldBar, 10)
+		var petPick = ModContent.GetInstance<Items.Tools.PetrifiedWoodPickaxe>();
+            	var petAxe = ModContent.GetInstance<Items.Tools.PetrifiedWoodAxe>();
+            	var petHammer = ModContent.GetInstance<Items.Tools.PetrifiedWoodHammer>();
+		// Start a new Recipe.
+		petPick.CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
+			.AddIngredient(ItemID.GoldBar, 10)
 
-				// Adds a vanilla tile requirement.
-				// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
-				.AddTile(TileID.Anvils)
+			// Adds a vanilla tile requirement.
+			// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
+			.AddTile(TileID.Anvils)
 
-				// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
-				.Register();
-            petAxe.CreateRecipe()
-				// Adds a Mod Ingredient. Do not attempt ItemID.ExampleSword, it's not how it works.
-				.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
-				.AddIngredient(ItemID.GoldBar, 10)
+			// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
+			.Register();
+            	petAxe.CreateRecipe()
+			// Adds a Mod Ingredient. Do not attempt ItemID.ExampleSword, it's not how it works.
+			.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
+			.AddRecipeGroup(GoldBarRecipeGroup, 10) //Attempting to use recipe group here, does not function.
 
-				// Adds a vanilla tile requirement.
-				// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
-				.AddTile(TileID.Anvils)
+			// Adds a vanilla tile requirement.
+			// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
+			.AddTile(TileID.Anvils)
 
-				// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
-				.Register();
-            petHammer.CreateRecipe()
-				// Adds a Mod Ingredient. Do not attempt ItemID.ExampleSword, it's not how it works.
-				.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
-				.AddIngredient(GoldBarRecipeGroup,10)
+			// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
+			.Register();
+            	petHammer.CreateRecipe()
+			// Adds a Mod Ingredient. Do not attempt ItemID.ExampleSword, it's not how it works.
+			.AddIngredient(ModContent.ItemType<Items.Placeables.petrifiedWood>(),35)
+			.AddIngredient(ItemID.GoldBar,10)
 
-				// Adds a vanilla tile requirement.
-				// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
-				.AddTile(TileID.Anvils)
+			// Adds a vanilla tile requirement.
+			// To specify a crafting station, specify a tile. Look up TileIDs: https://github.com/tModLoader/tModLoader/wiki/Vanilla-Tile-IDs
+			.AddTile(TileID.Anvils)
 
-				// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
-				.Register();
+			// When you're done, call this to register the recipe. Note that there's a semicolon at the end of the chain.
+			.Register();
         }
 	}
 }
