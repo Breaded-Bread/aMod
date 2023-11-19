@@ -1,0 +1,50 @@
+# This file will automatically update with entries for new content after a build and reload
+
+Items: {
+	DirtSword: {
+		DisplayName: Dirt Sword
+		Tooltip:
+			'''
+			Might get dirt in the enemy's eyes.
+			Crumbles easily.
+			'''
+	}
+
+	petrifiedWood: {
+		DisplayName: Petrified Wood
+		Tooltip: ""
+	}
+
+	PetrifiedWoodAxe: {
+		DisplayName: Petrified Wood Axe
+		Tooltip: ""
+	}
+
+	PetrifiedWoodHammer: {
+		DisplayName: Petrified Wood Hammer
+		Tooltip: ""
+	}
+
+	PetrifiedWoodPickaxe: {
+		DisplayName: Petrified Wood Pickaxe
+		Tooltip: ""
+	}
+
+	PetrifiedWoodAxe2: {
+		DisplayName: Petrified Wood Axe2
+		Tooltip: ""
+	}
+
+	PetrifiedWoodHammer2: {
+		DisplayName: Petrified Wood Hammer2
+		Tooltip: ""
+	}
+
+	PetrifiedWoodPickaxe2: {
+		DisplayName: Petrified Wood Pickaxe2
+		Tooltip: ""
+	}
+}
+
+WorldGen.ExampleOrePassMessage: Mods.aMod.WorldGen.ExampleOrePassMessage
+Tiles.petrifiedWoodTile.MapEntry: petrified Wood Tile
